@@ -15,7 +15,7 @@
 
 ## Demo Preview
 
-Online view：[link](https://4ark.me/star-battle)
+Online view：[link](https://tinluuvtl.github.io/Star-Battle)
 
 ## Luận Chơi
 
@@ -36,7 +36,7 @@ Online view：[link](https://4ark.me/star-battle)
 ## Tác Giả
 
 ### [Facebook](https://www.facebook.com/profile.php?id=100082063023921) 
-### GitHub [@Tín Lưu](https://github.com/gd4Ark)
+### GitHub [@Tín Lưu](https://github.com/tinluuVTL)
 
 ## Conclusion
 Nếu bạn nghĩ rằng dự án của tôi là tốt👏. Cho một ngôi sao⭐sự khích lệ.
