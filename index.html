@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Star Battle</title>
+</head>
+
+<body>
+    <!-- Game -->
+    <div id="app">
+        <div id="logo">
+            <img src="./img/logo-01.png" alt="logo">
+        </div>
+        <div id="container" class="absolute">
+            <div id="start" class="column">
+                <p class="message pre">
+                    1.Sử dụng các phím A,W,S,D để điều khiển phi thuyền, phím space(dấu cách) để bắn
+                    2. Gía trị nhiên liệu ban đầu là 15,giảm 1 điểm mõi giây.Khi gia trị về 0 trò chơi kết thúc
+                    3. Nhặt chai nguyên liệu rơi ngẫu nhiên để được cộng 15 điểm, tối da 30 điểm.
+                    4. Bắn tàu địch cộng 5 điểm,Các hành tinh cần bắn trúng 2 lần, cộng 10 điểm.Trừ 10 khi bắn trúng tàu
+                    đồng minh
+                    5. Đụng trúng địch mất 15 điểm xăng.
+                    6. Trò chơi cho phép điểm số âm.
+                    7. Nhấn phím P để Tạm dùng,M để tắc tiếng。
+                    Bắt đầu chiến tranh giữa các vì sao của bạn🛸🛸🌟!
+                </p>
+                <button id="start-btn" class="btn">
+                    <p>Start ⚔</p>
+                    <p>Đang tải...🔃</p>
+                </button>
+            </div>
+            <div id="play" class="absolute">
+                <canvas id="canvas" class="absolute"></canvas>
+                <div class="content absolute">
+                    <div class="header">
+                        <ul class="info">
+                            <li>
+                                <img src="./img/time3.png" alt="time">
+                                <span id="time">00</span>
+                            </li>
+                            <li>
+                                <img src="./img/fuel2.png" alt="fuel">
+                                <span id="fuel">00</span>
+                            </li>
+                            <li>
+                                <img src="./img/score.png" alt="score">
+                                <span id="score">00</span>
+                            </li>
+                            <li>
+                                <img src="./img/playerBullet.png" alt="score">
+                                <span id="shoot">00</span>
+                            </li>
+
+                        </ul>
+                        <ul class="option">
+                            <li id="game-font-size-add">
+                                <img class="pause" src="./img/a+.png" alt="time">
+                            </li>
+                            <li id="game-font-size-reduce">
+                                <img class="pause" src="./img/a-.png" alt="time">
+                            </li>
+                            <li id="game-mute-btn">
+                                <img class="pause" src="./img/mute.png" alt="time">
+                                <img class="pause" src="./img/speaker.png" alt="time">
+                            </li>
+                            <li id="game-pause-btn">
+                                <img class="pause" src="./img/play.png" alt="time">
+                                <img class="pause" src="./img/pause.png" alt="time">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="over" class="column absolute">
+                <div class="game-data">
+                    <p class="message">
+                        <span>
+                            <img src="./img/time3.png" alt="time">
+                        </span>
+                        <span>
+                            --
+                        </span>
+                        <span class="time">00</span>
+                    </p>
+                    <p class="message">
+                        <span>
+                            <img src="./img/score.png" alt="score">
+                        </span>
+                        <span>
+                            --
+                        </span>
+                        <span class="score">00</span>
+                    </p>
+                    <p class="message">
+                        <span>
+                            <img src="./img/playerBullet.png" alt="score">
+                        </span>
+                        <span>
+                            --
+                        </span>
+                        <span class="shoot">00</span>
+                    </p>
+                </div>
+                <input type="text" id="name" placeholder="Xin hãy nhập tên của bạn" />
+                <button id="submit-btn" class="btn" disabled>
+                    Continue the game
+                </button>
+            </div>
+            <div id="rank" class="column absolute">
+                <table class="scroll">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Fraction</th>
+                            <th>Seconds</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                <button id="restart-btn" class="btn">
+                    Back to start
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <span>Crafted with by :@Tín Lưu
+            <br>
+            Liên Hệ :
+
+            <a href="https://www.facebook.com/profile.php?id=100082063023921">Facebook
+            </a> ||
+
+            <a href="https://github.com/tinluuVTL">GitHub
+            </a>||
+
+            <a href="mailto:vantinluu.vtl@gmail.com"> Email
+
+            </a>||
+            <a href="https://www.tiktok.com/@thien1718/">tiktok
+            </a>
+            ||
+            <a href="https://www.youtube.com/channel/UCMYDYpmizCChSlOti9P1DgA">youtube
+
+            </a>
+
+        </span>
+    </footer>
+    <script src="js/config/config.js"></script>
+    <script src="js/utils/utils.js"></script>
+    <script src="js/utils/res.js"></script>
+    <script src="js/class/scene.js"></script>
+    <script src="js/class/cooldown.js"></script>
+    <script src="js/class/element.js"></script>
+    <script src="js/class/animation.js"></script>
+    <script src="js/class/plane.js"></script>
+    <script src="js/class/bullet.js"></script>
+    <script src="js/class/player.js"></script>
+    <script src="js/class/enemy.js"></script>
+    <script src="js/class/meteorite.js"></script>
+    <script src="js/class/friend.js"></script>
+    <script src="js/class/star.js"></script>
+    <script src="js/class/fuel.js"></script>
+    <script src="js/scenes/start.js"></script>
+    <script src="js/scenes/play.js"></script>
+    <script src="js/scenes/over.js"></script>
+    <script src="js/scenes/rank.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
